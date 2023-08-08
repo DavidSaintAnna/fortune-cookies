@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-color: #34355b;
+  --black-for-font: #000;
+  --yellow-for-button: #ff9500;
+  --white-color: #ffffff;
+  --shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+  --message-background: #e4edf1;
+  --message-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+}
+
+main {
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  width: 29.8rem;
+  height: 37.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  border-radius: 0.5rem;
+  background: var(--white-color);
+  box-shadow: var(--shadow);
+}
+
+.menu-after-click {
+  width: 32.8rem;
+  height: 45.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  border-radius: 0.5rem;
+  background: var(--white-color);
+  box-shadow: var(--shadow);
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  color: var(--font-color);
+  text-align: center;
+}
+
+.menu > span {
+  font-family: "DM Sans", sans-serif;
+  width: 27.3rem;
+  height: 8.7rem;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  margin-top: 1.4rem;
+  text-align: center;
+}
+
+.menu-after-click > span {
+  animation: fadeIn 5s;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  color: var(--black-for-font);
+  background: var(--message-background);
+  box-shadow: var(--message-shadow);
+  text-align: center;
+  margin-top: 2.7rem;
+  padding: 1rem;
+}
+
+.btn {
+  width: 17.4rem;
+  height: 5.2rem;
+  padding: 1.6rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: none;
+  background: var(--yellow-for-button);
+  color: var(--white-color);
+  border-radius: 0.4rem;
+  margin-top: 1.7rem;
+}
+
+img {
+  width: 20rem;
+  height: 20rem;
+  margin-top: 2.642rem;
+}
+
+.menu > img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@media (min-width: 770px) {
+  .menu {
+    width: 42.8rem;
+    height: 42.4rem;
+  }
+
+  .menu > img {
+    width: 24.8842rem;
+    height: 19.179rem;
+  }
+  .menu-after-click {
+    width: 42.8rem;
+    height: 56.4rem;
+  }
+  .menu-after-click > span {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+    animation: fadeIn 5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    gap: 1rem;
+    margin-top: 1.7rem;
+    padding: 1rem;
+  }
+
+  .menu-after-click > img {
+    margin-top: 6rem;
+    width: 30rem;
+    height: 11.453rem;
+  }
+  .btn {
+    width: 19.4rem;
+    height: 5.2rem;
+    padding: 1.6rem;
+    margin-top: 7.3rem;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
